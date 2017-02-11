@@ -1,5 +1,5 @@
 # avarius-bot [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Official Avarius Discord Bot
+> Official Avarius Discord Bot !
 
 ## Installation
 
