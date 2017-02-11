@@ -11,21 +11,26 @@ client.Dispatcher.on("GATEWAY_READY", e => {
 });
 
 client.Dispatcher.on("MESSAGE_CREATE", e => {
-    if (e.message.content == "!ping"){
+    if (e.message.content == "!ping" || e.message.content == "!Ping" ){
         e.message.channel.sendMessage("pong");
     }
 
 
-    if (e.message.content == "!pong"){
+    if (e.message.content == "!pong" || e.message.content == "!Pong" ){
         e.message.channel.sendMessage("ping");
     }
 
-if (e.message.content == "!commands"){
-    e.message.channel.sendMessage("All available commands are: \nPing \nPong");
+if (e.message.content == "!commands" || e.message.content == "!Commands" ){
+    e.message.channel.sendMessage("All available commands are: \n!Ping \n!Pong \n!homepage");
 }
 
-if (e.message.content == "!realmlist"){
+if (e.message.content == "!homepage" || e.message.content == "!Homepage"){
     e.message.channel.sendMessage("avarius.net");
 }
 
+});
+
+
+client.Dispatcher.on("GUILD_MEMBER_ADD", e => {
+    e.message.channel.sendMessage("Welcome on our Server! \nType !commands to get a List of all available Commands! \nIf you need Support, please use our SupportChanel");
 });
