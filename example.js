@@ -47,9 +47,6 @@ if (e.message.content == "!wow rates"){
     e.message.channel.sendMessage("Blizzlike Realms Rates are: \nXP-Rate: Not available due redesign of the Realm!");
 }
 
-});
-
-//metin2
 if (e.message.content == "!metin" || e.message.content == "!Metin"){
     e.message.channel.sendMessage("All Metin related commands are: \n!metin realmlist \n!metin rates \n!metin features");
 }
@@ -59,6 +56,11 @@ if (e.message.content == "!metin" || e.message.content == "!Metin"){
 if (e.message.content == "!ark" || e.message.content == "!Ark"){
     e.message.channel.sendMessage("All Ark related commands are: \n!ark connect");
 }
+
+
+});
+
+//metin2
 
 
 client.Dispatcher.on("GUILD_MEMBER_ADD", e => {
