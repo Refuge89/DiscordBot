@@ -58,7 +58,9 @@ if (e.message.content == "!wow rates"){
 
 //Metin
 if (e.message.content == "!metin" || e.message.content == "!Metin"){
-    e.message.channel.sendMessage("All Metin related commands are: \n The Metin team should do something here.");
+    e.message.channel.sendMessage("All Metin related commands are: \nThe Metin team should do something here.");
+    var user = client.Users.find(u => u.username == "SkillarzHD");
+    e.message.channel.sendMessage(user.mention + ", Metin commands are still missing. Please include the Commands asap! \nKind Regards!");
 }
 
 
@@ -77,6 +79,36 @@ if (e.message.content == "!ark connect"){
 if (e.message.content == "!team"){
     e.message.channel.sendMessage("A complete List of our Team members can be found here: https://blacknetwork.eu/staff/");
 }
+
+//test
+if (e.message.content == "!test"){
+const guild = client.Guilds.getBy("name", "Avarius");
+
+
+	if (guild) {
+         e.message.channel.sendMessage("https://blacknetwork.eu/community/");
+         //e.message.client.message.sendMessage("Thanks for beeing a user of Avarius.net. Our Homepage is available: http://www.avarius.net !")
+		// guild.voiceChannels returns an array
+		
+	}
+    e.message.channel.sendMessage("https://blacknetwork.eu/community/");
+	console.log("BN Server found!");
+}
+
+if (e.message.content == "!roles"){
+
+  var member = e.message.member;
+  member.sendDM("Test Message");
+  console.log(member);
+  // same as
+  var member = e.message.author.memberOf(e.message.guild);
+
+  const roleNames = member.roles.map(role => role.name);
+  e.message.reply("Roles: " + (roleNames.join(", ") || "no roles"));
+
+
+}
+
 
 });
 
