@@ -26,29 +26,39 @@ if (e.message.content == "!commands" || e.message.content == "!Commands" ){
 }
 
 if (e.message.content == "!homepage" || e.message.content == "!Homepage"){
-    e.message.channel.sendMessage("avarius.net");
+    e.message.channel.sendMessage("https://blacknetwork.eu/community/");
 }
 
 if (e.message.content == "!help" || e.message.content == "!Help"){
-    e.message.channel.sendMessage("What is the type of needed help? Type in one of the following Keyworks! \n!wow \n!metin2 \n!ark");
+    e.message.channel.sendMessage("What is the type of needed help? Type in one of the following Keyworks! \n!wow \n!metin \n!ark");
 }
 
 //wow help commands
 if (e.message.content == "!wow" || e.message.content == "!WOW"){
-    e.message.channel.sendMessage("All WoW related commands are: \n!wow realmlist \n!wow rates \n!wow features");
+    e.message.channel.sendMessage("All WoW related commands are: \n!wow realmlist \n!wow rates \n!wow connect \n!wow features");
 }
 
 if (e.message.content == "!wow realmlist"){
-    e.message.channel.sendMessage("For our WotLK and Legion realm the realmlist is: \nlogon.wow.blacknetwork.eu \n\n#################### \n\nFor our MOP Realm the realmlist is \nlogon.wow.blacknetwork.eu:3725.");
+    e.message.channel.sendMessage("For our WotLK and Legion realm the realmlist is: logon.wow.blacknetwork.eu" 
+    + " \n\n####################" 
+    + " \n\nFor our MOP Realm the realmlist is: \nlogon.wow.blacknetwork.eu:3725.");
 }
 
+
+if (e.message.content == "!wow connect"){
+    e.message.channel.sendMessage("How To Connect: " 
+    + "\n Wotlk: https://blacknetwork.eu/wiki/wow/typhoon/" 
+    + "\n MOP: https://blacknetwork.eu/wiki/wow/amaterasu/"
+    + "\n Legion: https://blacknetwork.eu/wiki/wow/ptr/");
+}
 
 if (e.message.content == "!wow rates"){
     e.message.channel.sendMessage("Blizzlike Realms Rates are: \nXP-Rate: Not available due redesign of the Realm!");
 }
 
+//Metin
 if (e.message.content == "!metin" || e.message.content == "!Metin"){
-    e.message.channel.sendMessage("All Metin related commands are: \n!metin realmlist \n!metin rates \n!metin features");
+    e.message.channel.sendMessage("All Metin related commands are: \n The Metin team should do something here.");
 }
 
 
@@ -57,10 +67,19 @@ if (e.message.content == "!ark" || e.message.content == "!Ark"){
     e.message.channel.sendMessage("All Ark related commands are: \n!ark connect");
 }
 
+if (e.message.content == "!ark connect"){
+    e.message.channel.sendMessage("#########################" 
+    + "\nHow To Connect: https://blacknetwork.eu/forums/t390-english-how-to-play-ark-survival-evolved-the-center/");
+}
+
+
+//team
+if (e.message.content == "!team"){
+    e.message.channel.sendMessage("A complete List of our Team members can be found here: https://blacknetwork.eu/staff/");
+}
 
 });
 
-//metin2
 
 
 client.Dispatcher.on("GUILD_MEMBER_ADD", e => {
