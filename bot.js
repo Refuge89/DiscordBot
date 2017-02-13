@@ -12,11 +12,11 @@ client.Dispatcher.on("GATEWAY_READY", e => {
 
 client.Dispatcher.on("MESSAGE_CREATE", e => {
     if (e.message.content == "!ping" || e.message.content == "!Ping" ){
-        e.message.channel.sendMessage("!pong");
+        e.message.channel.sendMessage("pong");
     }
 
     if (e.message.content == "!pong" || e.message.content == "!Pong" ){
-        e.message.channel.sendMessage("!ping");
+        e.message.channel.sendMessage("ping");
     }
 
 if (e.message.content == "!commands" || e.message.content == "!Commands" ){
