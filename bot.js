@@ -12,16 +12,15 @@ client.Dispatcher.on("GATEWAY_READY", e => {
 
 client.Dispatcher.on("MESSAGE_CREATE", e => {
     if (e.message.content == "!ping" || e.message.content == "!Ping" ){
-        e.message.channel.sendMessage("pong");
+        e.message.channel.sendMessage("!pong");
     }
 
-
     if (e.message.content == "!pong" || e.message.content == "!Pong" ){
-        e.message.channel.sendMessage("ping");
+        e.message.channel.sendMessage("!ping");
     }
 
 if (e.message.content == "!commands" || e.message.content == "!Commands" ){
-    e.message.channel.sendMessage("All available commands are: \n!Ping \n!Pong \n!Homepage \n!Commands \n!Help \n!wow \n!metin \n!ark \n!team");
+    e.message.channel.sendMessage("All available commands are: \n!Ping \n!Pong \n!Homepage \n!Commands \n!Help \n!wow \n!metin \n!ark \n!team \n!avarius");
 }
 
 if (e.message.content == "!homepage" || e.message.content == "!Homepage"){
@@ -34,7 +33,7 @@ if (e.message.content == "!help" || e.message.content == "!Help"){
 
 //wow help commands
 if (e.message.content == "!wow" || e.message.content == "!WOW"){
-    e.message.channel.sendMessage("All WoW related commands are: \n!wow realmlist \n!wow rates \n!wow connect \n!wow features");
+    e.message.channel.sendMessage("All WoW related commands are: \n!wow realmlist \n!wow rates \n!wow connect \n!wow features \n!wow docu");
 }
 
 if (e.message.content == "!wow realmlist"){
@@ -47,7 +46,7 @@ if (e.message.content == "!wow realmlist"){
 if (e.message.content == "!wow connect"){
     e.message.channel.sendMessage("How To Connect: " 
     + "\n Wotlk: https://blacknetwork.eu/wiki/wow/typhoon/" 
-    + "\n MOP: https://blacknetwork.eu/wiki/wow/amaterasu/"
+    + "\n MOP:https://blacknetwork.eu/wiki/wow/windwalkers/"
     + "\n Legion: https://blacknetwork.eu/wiki/wow/ptr/");
 }
 
