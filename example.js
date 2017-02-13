@@ -2,7 +2,6 @@ var Discordie = require("discordie");
 var client = new Discordie();
 
 client.connect({
-  // replace this sample token
   token: "Mjc5OTQ3Mzk1MTc1ODA5MDI1.C4CuwQ.M53C-HsnBUoGTGb5InMt-8dVqsg"
 });
 
@@ -22,7 +21,7 @@ client.Dispatcher.on("MESSAGE_CREATE", e => {
     }
 
 if (e.message.content == "!commands" || e.message.content == "!Commands" ){
-    e.message.channel.sendMessage("All available commands are: \n!Ping \n!Pong \n!Homepage \n!Commands \n!Help \n!wow \n!metin \nark \n!team");
+    e.message.channel.sendMessage("All available commands are: \n!Ping \n!Pong \n!Homepage \n!Commands \n!Help \n!wow \n!metin \n!ark \n!team");
 }
 
 if (e.message.content == "!homepage" || e.message.content == "!Homepage"){
@@ -58,7 +57,6 @@ if (e.message.content == "!wow rates"){
 
 //Metin
 if (e.message.content == "!metin" || e.message.content == "!Metin"){
-    e.message.channel.sendMessage("All Metin related commands are: \nThe Metin team should do something here.");
     var user = client.Users.find(u => u.username == "SkillarzHD");
     e.message.channel.sendMessage(user.mention + ", Metin commands are still missing. Please include the Commands asap! \nKind Regards!");
 }
