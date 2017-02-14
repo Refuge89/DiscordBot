@@ -55,7 +55,7 @@ if (e.message.content == "!wow rates"){
 }
 
 //Metin
-if (e.message.content == "!metin" || e.message.content == "!Metin"){
+if (e.message.content == "!metin" || e.message.content == "!Metin" || e.message.content == "!metin2"){
     var user = client.Users.find(u => u.username == "SkillarzHD");
     e.message.channel.sendMessage(user.mention + ", Metin commands are still missing. Please include the Commands asap! \nKind Regards!");
 }
