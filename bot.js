@@ -6,6 +6,12 @@ var bot = new Discord.Client({
  
 bot.on('ready', function() {
     console.log(bot.username + " - (" + bot.id + ")");
+    bot.setPresence({
+        game: {
+            name: "World of Warcraft"
+        }
+    });
+
 });
  
 function sendPMMessage(userID,message){
@@ -15,17 +21,24 @@ function sendPMMessage(userID,message){
         });
 }
 
+function sendChannelMsg(channelID,message){
+    bot.sendMessage({
+            to: channelID,
+            message: message
+        });
+}
+
+bot.on("channelCreate",function(channelID){
+    sendChannelMsg("New channel created");
+})
 
 bot.on('message', function(user, userID, channelID, message, event) {
     if (message === "!help") {    
         bot.moveUserTo({
-            channelID: "support"
+            userID: userID,
+            channelID: channelID
         })    
         sendPMMessage(userID,"What is the type of needed help? Type in one of the following Keyworks! \n!wow \n!metin \n!ark");
-      }
-
-      if(message == "!test"){
-          sendPMMessage(userID,"Dies ist ein Test");
       }
 
     if (message == "!commands" || message == "!Commands") {
@@ -33,9 +46,19 @@ bot.on('message', function(user, userID, channelID, message, event) {
         sendPMMessage(userID,"All available commands are: \n!Ping \n!Pong \n!Homepage \n!Commands \n!Help \n!wow \n!metin \n!ark \n!team \n!avarius");      
     }
 
-      if (message == "!Homepage" || message == "!homepage") {
+    if (message == "!Homepage" || message == "!homepage") {
         
         sendPMMessage(userID,"www.avarius.net");       
+    }
+
+    if (message == "!Ping" || message == "!ping") {
+        
+        sendPMMessage(userID,"pong");       
+    }
+
+    if (message == "!Pong" || message == "!pong") {
+        
+        sendPMMessage(userID,"ping");       
     }
 
 //wow
@@ -67,6 +90,7 @@ bot.on('message', function(user, userID, channelID, message, event) {
 
 
 
+
 //metin
 
       if (message == "!metin" || message == "!METIN"  || message == "!metin2") {
@@ -88,6 +112,12 @@ bot.on('message', function(user, userID, channelID, message, event) {
 //team
      if (message == "!team") {
         sendPMMessage(userID,"A complete List of our Team members can be found here: https://blacknetwork.eu/staff/");
+    }
+
+
+    //Testcommands
+    if (message == "!test") {
+        sendChannelMsg(channelID,"test");
     }
 
 });
