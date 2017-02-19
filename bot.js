@@ -94,11 +94,46 @@ bot.on('message', function(user, userID, channelID, message, event) {
 //metin
 
       if (message == "!metin" || message == "!METIN"  || message == "!metin2") {
-          sendPMMessage(userID, "Metin commands are still missing. Please include the Commands asap! \nKind Regards!");
+          sendPMMessage(userID, "All Metin2 related commands are: \n!mt2 bugtrack \n!mt2 rates \n!mt2 connect \n!mt2 homepage \n!mt2 forums \n!mt2 features \n!mt2 team");
        }
 
+    if (message == "!mt2 rates") {
+       sendPMMessage(userID, "Metin2 Rates: " 
+            + "EXP: 100%" 
+            + "Drop: 100%"
+            + "Yang Drop: 100%");
+    }
+	
+    if (message == "!mt2 connect") {
+       sendPMMessage(userID, "How To Connect: " 
+            + "1. Account: https://account.blacknetwork.eu" 
+            + "2. Clientdownload: https://blacknetwork.eu/files/file/4-alcatraz-client/"
+    }
+	
+    if (message == "!mt2 homepage") {
+        sendPMMessage(userID,"https://blacknetwork.eu/mt2/");
+    }
+	
+    if (message == "!mt2 forum") {
+        sendPMMessage(userID,"https://blacknetwork.eu/forums/f76-alcatraz/");
+    }
+	
+    if (message == "!mt2 features") {
+        sendPMMessage(userID,"coming soon @SkillarzHD");
+    }
 
-
+    if (message == "!mt2 team") {
+       sendPMMessage(userID, "Metin2 Team: " 
+            + "MT2 Alcatraz-Leitung = Sakesan" 
+            + "MT2 Alcatraz-DEV = Nyor"
+			+ "MT2 DEV = SkillarzHD"
+			+ "MT2 Alcatraz-SGM =  Lice"
+			+ "MT2 Alcatraz-GM = Delya" 
+    }
+	
+    if (message == "!mt2 bugtrack") {
+        sendPMMessage(userID,"https://bugs.blacknetwork.eu/my_view_page.php");
+    }
 //ark
     if (message == "!ark") {
         sendPMMessage(userID,"All Ark related commands are: \n!ark connect");
