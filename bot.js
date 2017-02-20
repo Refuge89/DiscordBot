@@ -88,6 +88,14 @@ bot.on('message', function(user, userID, channelID, message, event) {
         sendPMMessage(userID,"Blizzlike Realms Rates are: \nXP-Rate: Not available due redesign of the Realm!");
     }
 
+    if (message == "!wow features") {
+        sendPMMessage(userID,"There are different Features on our WoW Realms!");
+    }
+
+    if (message == "!wow reportsystem") {
+        sendPMMessage(userID,"Type .report quest [Shift-Click on the Quest in the Questlog],Your Reportmessage\nHint: Questname and Errormessage must be seperated with a ,!! If not, the command will not work! ");
+
+    }
 
 
 
@@ -108,7 +116,7 @@ bot.on('message', function(user, userID, channelID, message, event) {
        sendPMMessage(userID, "How To Connect: " 
             + "1. Account: https://account.blacknetwork.eu" 
             + "2. Clientdownload: https://blacknetwork.eu/files/file/4-alcatraz-client/"
-    }
+       )}
 	
     if (message == "!mt2 homepage") {
         sendPMMessage(userID,"https://blacknetwork.eu/mt2/");
@@ -129,7 +137,7 @@ bot.on('message', function(user, userID, channelID, message, event) {
 			+ "MT2 DEV = SkillarzHD"
 			+ "MT2 Alcatraz-SGM =  Lice"
 			+ "MT2 Alcatraz-GM = Delya" 
-    }
+       )}
 	
     if (message == "!mt2 bugtrack") {
         sendPMMessage(userID,"https://bugs.blacknetwork.eu/my_view_page.php");
