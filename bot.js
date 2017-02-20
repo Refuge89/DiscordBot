@@ -93,7 +93,7 @@ bot.on('message', function(user, userID, channelID, message, event) {
     }
 
     if (message == "!wow reportsystem") {
-        sendPMMessage(userID,"Type .report quest [Shift-Click on the Quest in the Questlog],Your Reportmessage\nHint: Questname and Errormessage must be seperated with a ,!! If not, the command will not work! ");
+        sendPMMessage(userID,"Type .report quest [Shift-Click on the Quest in the Questlog],Your Reportmessage\nHint: Questname and Errormessage must be seperated with a comma!! If not, the command will not work! ");
 
     }
 
