@@ -31,7 +31,6 @@ function sendChannelMsg(channelID,message){
 bot.on("channelCreate",function(channelID){
     sendChannelMsg("New channel created");
 })
-
 bot.on('message', function(user, userID, channelID, message, event) {
     if (message === "!help") {    
         bot.moveUserTo({
@@ -40,6 +39,13 @@ bot.on('message', function(user, userID, channelID, message, event) {
         })    
         sendPMMessage(userID,"What is the type of needed help? Type in one of the following Keyworks! \n!wow \n!metin \n!ark");
       }
+
+
+//Hello
+    if (message == "hallo" ||message == "hi" || message == "hello") {
+        sendChannelMsg(channelID,"Willkommen auf dem Black Network Discord."); 
+        sendChannelMsg(channelID,"Welcome on Black Network Discord.");
+    }
 
     if (message == "!commands" || message == "!Commands") {
         
