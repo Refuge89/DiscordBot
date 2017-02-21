@@ -37,7 +37,7 @@ bot.on('message', function(user, userID, channelID, message, event) {
             userID: userID,
             channelID: channelID
         })    
-        sendPMMessage(userID,"What is the type of needed help? Type in one of the following Keyworks! \n!wow \n!metin \n!ark");
+        sendPMMessage(userID,"What is the type of needed help? Type in one of the following Keyworks! \n!wow \n!metin \n!ark \n!commands");
       }
 
 
@@ -199,6 +199,13 @@ if (message == "!legion xpsystem") {
         sendPMMessage(userID,"A complete List of our Team members can be found here: https://blacknetwork.eu/staff/");
     }
 
+
+//team
+     if (message == "!avarius") {
+        sendPMMessage(userID,"Avarius.net is the creator of this Bot and owns the Core for WotLK Realms. ");
+        sendPMMessage(userID,"Founder of Avarius.net are Wasdmovement and Exitare.");
+        sendPMMessage(userID,"Avarius Homepage: http://www.avarius.net");
+    }
 
     //Testcommands
     if (message == "!test") {
