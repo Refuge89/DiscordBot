@@ -75,11 +75,11 @@ bot.on('message', function(user, userID, channelID, message, event) {
 
      if (message == "!wotlk") {
        
-       sendPMMessage(userID,"All WotLK related commands are: \n!wotlk rates \n!wotlk features \n!wotlk docu \n!wotlk xpsystem");
+       sendPMMessage(userID,"All WotLK related commands are: \n!wotlk rates \n!wotlk features \n!wotlk docu \n!wotlk xpsystem \n!wotlk reportsystem");
     }
 
      if (message == "!legion") {
-       sendPMMessage(userID,"All Legion related commands are: \n!legion rates \n!legion quickcommands");
+       sendPMMessage(userID,"All Legion related commands are: \n!legion rates \n!legion quickcommands \n!legion reportsystem \n!legion xpsystem");
     }
 
     if (message == "!wow realmlist") {
@@ -129,6 +129,16 @@ bot.on('message', function(user, userID, channelID, message, event) {
         sendPMMessage(userID,"Legion Realm Rates are: \nXP-Rate: Not available due redesign of the Realm!");
     }
 
+ if (message == "!legion reportsystem") {
+        sendPMMessage(userID,"Type .report quest [Shift-Click on the Quest in the Questlog],Your Reportmessage\nHint: Questname and Errormessage must be seperated with a comma!! If not, the command will not work! ");
+        sendPMMessage(userID,"Only Quests are reportable at this time! Item and Spellreports are in construction.");
+        sendPMMessage(userID,"Do you have any further questions? Contact: Exitare");
+    }
+
+if (message == "!legion xpsystem") {
+        sendPMMessage(userID,"Just type in .xprate and have fun with a variable XP Rate!");
+        sendPMMessage(userID,"Do you have any further questions? Contact: Exitare");
+    }
 
 
 //metin
