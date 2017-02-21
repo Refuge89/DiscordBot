@@ -176,7 +176,7 @@ if (message == "!legion xpsystem") {
        sendPMMessage(userID, "Metin2 Team: " 
             + "\nMT2 Alcatraz-Leitung = Sakesan" 
             + "\nMT2 Alcatraz-DEV = Nyor"
-			+ "\nMT2 DEV = SkillarzHD"
+			+ "\nMT2 DEV = SkillarzHD :heart:"
 			+ "\nMT2 Alcatraz-SGM =  Lice"
 			+ "\nMT2 Alcatraz-GM = Delya" 
        )}
