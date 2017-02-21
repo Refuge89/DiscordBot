@@ -32,7 +32,7 @@ bot.on("channelCreate",function(channelID){
     sendChannelMsg("New channel created");
 })
 bot.on('message', function(user, userID, channelID, message, event) {
-    if (message === "!help" || message == "hilfe") {    
+    if (message === "!help" || message == "hilfe" || message == "!hilfe") {    
         bot.moveUserTo({
             userID: userID,
             channelID: channelID
@@ -42,7 +42,7 @@ bot.on('message', function(user, userID, channelID, message, event) {
 
 
 //Hello
-    if (message == "hallo" ||message == "hi" || message == "hello") {
+    if (message == "hallo" ||message == "hi" || message == "hello" || message == "guden" || message == "moin" || message == "morgen") {
         sendChannelMsg(channelID,"Willkommen auf dem Black Network Discord."); 
         sendChannelMsg(channelID,"Welcome on Black Network Discord.");
     }
